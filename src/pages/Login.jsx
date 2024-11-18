@@ -73,9 +73,9 @@ const Login = () => {
             {showPass ? <FaEyeSlash /> : <FaEye />}
           </button>
             <label className="label">
-              <a href="#" className="label-text-alt link link-hover">
+              <Link to={'/auth/resetpassword'}  className="label-text-alt link link-hover">
                 Forgot password?
-              </a>
+              </Link>
             </label>
           </div>
           <div>

@@ -8,13 +8,13 @@ const MyProfile = () => {
     const navigate = useNavigate()
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100 rounded-xl">
+    <div className="flex justify-center items-center min-h-screen bg-gray-100 py-6 rounded-xl">
       <div className="card  bg-base-100 shadow-xl p-6">
         <figure className="w-32 h-32 mx-auto">
           <img
-            src={user.photoURL || "https://via.placeholder.com/150"}
+            src={user?.photoURL || "https://via.placeholder.com/150"}
             alt="Profile"
-            className="rounded-full border-4 border-green-600"
+            className=" h-32 w-32 object-cover rounded-full border-4 border-green-600"
           />
         </figure>
         <div className="card-body text-center">
