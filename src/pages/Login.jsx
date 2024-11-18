@@ -1,9 +1,12 @@
 import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
+import toast from "react-hot-toast";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
   const [errorMessage, setErrorMessage] = useState("");
+  const [showPass, setShowPass] = useState(false);
   const location = useLocation();
   const navigate = useNavigate()
   const {signInUser,setUser,signInWithGoogle} = useContext(AuthContext)
@@ -52,17 +55,23 @@ const Login = () => {
               required
             />
           </div>
-          <div className="form-control">
+          <div className="form-control relative">
             <label className="label">
               <span className="label-text">Password</span>
             </label>
             <input
-              type="password"
+               type={showPass ? "text" : "password"}
               name="password"
               placeholder="password"
               className="input input-bordered"
               
             />
+             <button
+            onClick={() => setShowPass(!showPass)}
+            className="btn btn-xs absolute right-2 top-12"
+          >
+            {showPass ? <FaEyeSlash /> : <FaEye />}
+          </button>
             <label className="label">
               <a href="#" className="label-text-alt link link-hover">
                 Forgot password?

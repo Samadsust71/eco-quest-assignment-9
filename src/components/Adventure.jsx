@@ -5,7 +5,7 @@ import AdventureCard from './AdventureCard'
 
 const Adventure = () => {
     const data = useLoaderData()
-    console.log(data)
+    
   return (
     <div>
       <div>

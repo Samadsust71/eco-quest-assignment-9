@@ -1,7 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const AdventureCard = ({ adventure = {} }) => {
-  console.log(adventure);
+  const navigate = useNavigate()
   const { id, adventureTitle, image, ecoFriendlyFeatures } = adventure || {};
   return (
     <div className="card bg-base-100  shadow-xl">
@@ -24,7 +25,7 @@ const AdventureCard = ({ adventure = {} }) => {
           }
           </ul>
         <div className="card-actions">
-          <button className="btn bg-green-600 text-white font-semibold">Explore Now</button>
+          <button onClick={()=>navigate(`/adventure/${id}`)} className="btn bg-green-600 text-white font-semibold">Explore Now</button>
         </div>
       </div>
     </div>

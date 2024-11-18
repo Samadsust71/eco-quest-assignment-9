@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FaBars } from "react-icons/fa";
 import { Link, NavLink, useNavigate } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
 
 const Header = () => {
+  const {logOutUser,user}=useContext(AuthContext)
   const navigate = useNavigate()
   const links = (
     <>
@@ -45,7 +47,14 @@ const Header = () => {
         <ul className="menu menu-horizontal  px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-        <button onClick={()=>navigate('/auth/login')} className="btn rounded-xl bg-green-600 text-white font-semibold">Login</button>
+        <div className="flex gap-2 items-center">
+          {
+           user &&user?.photoURL && <img title={user?.displayName} src={user.photoURL} className="h-10 w-10 rounded-full object-cover" alt="user" />
+          }
+        {
+          user ?<button onClick={logOutUser} className="btn rounded-xl bg-green-600 text-white font-semibold">Logout</button> :<button onClick={()=>navigate('/auth/login')} className="btn rounded-xl bg-green-600 text-white font-semibold">Login</button>
+        }
+        </div>
       </div>
     </div>
   );
