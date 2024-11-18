@@ -1,8 +1,9 @@
 import React from "react";
 import { FaBars } from "react-icons/fa";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate()
   const links = (
     <>
       <li>
@@ -44,7 +45,7 @@ const Header = () => {
         <ul className="menu menu-horizontal  px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-        <button className="btn rounded-xl bg-green-600 text-white font-semibold">Login</button>
+        <button onClick={()=>navigate('/auth/login')} className="btn rounded-xl bg-green-600 text-white font-semibold">Login</button>
       </div>
     </div>
   );

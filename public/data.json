@@ -1,0 +1,148 @@
+[
+    {
+      "id": "001",
+      "adventureTitle": "Mystical Mountain Trek",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHpI90Tf6iIwEDkKWzLCdWDSpbQhDOnZQ0Lg&s",
+      "categoryName": "Mountain Treks",
+      "shortDescription": "Experience the thrill of trekking through breathtaking mountain landscapes.",
+      "adventureCost": 250,
+      "bookingAvailability": "Available",
+      "location": "Himalayas, Nepal",
+      "duration": "7 Days",
+      "adventureLevel": "Intermediate",
+      "includedItems": [
+        "Guide",
+        "First-aid kit",
+        "Trekking poles",
+        "Meals"
+      ],
+      "ecoFriendlyFeatures": [
+        "No single-use plastics",
+        "Leave-no-trace policy",
+        "Eco-friendly accommodations"
+      ],
+      "maxGroupSize": 10,
+      "specialInstructions": [
+        "Carry reusable water bottles.",
+        "Wear comfortable trekking shoes.",
+        "Ensure physical fitness before the trek."
+      ]
+    },
+    {
+      "id": "002",
+      "adventureTitle": "Ocean Dive Expedition",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ1OYXg1bbT6ReYblgo_ZJV--TkzqcGKqfkQ&s",
+      "categoryName": "Ocean Dives",
+      "shortDescription": "Dive into the crystal-clear waters to explore vibrant coral reefs and marine life.",
+      "adventureCost": 300,
+      "bookingAvailability": "Limited Slots",
+      "location": "Great Barrier Reef, Australia",
+      "duration": "3 Days",
+      "adventureLevel": "Advanced",
+      "includedItems": [
+        "Dive gear",
+        "Professional dive instructor",
+        "Boat transfer",
+        "Snacks and refreshments"
+      ],
+      "ecoFriendlyFeatures": [
+        "Marine-safe sunscreen provided",
+        "Waste disposal management",
+        "Coral conservation initiatives"
+      ],
+      "maxGroupSize": 6,
+      "specialInstructions": [
+        "Must have a diving certification.",
+        "Avoid touching corals and marine life.",
+        "Bring a dry bag for personal items."
+      ]
+    },
+    {
+      "id": "003",
+      "adventureTitle": "Safari Adventure",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYq6Cx3wsvxGZSYwG6iVJEB-gwDeDiRDDzWg&s",
+      "categoryName": "Wildlife Safaris",
+      "shortDescription": "Discover the majestic wildlife on this eco-conscious safari.",
+      "adventureCost": 400,
+      "bookingAvailability": "Available",
+      "location": "Serengeti National Park, Tanzania",
+      "duration": "5 Days",
+      "adventureLevel": "Beginner",
+      "includedItems": [
+        "4x4 safari vehicle",
+        "Professional guide",
+        "Binoculars",
+        "Meals"
+      ],
+      "ecoFriendlyFeatures": [
+        "No animal disturbances",
+        "Use of biofuel vehicles",
+        "Support for local conservation efforts"
+      ],
+      "maxGroupSize": 8,
+      "specialInstructions": [
+        "Wear neutral-colored clothing.",
+        "Follow guide's instructions strictly.",
+        "Respect wildlife and maintain silence."
+      ]
+    },
+    {
+      "id": "004",
+      "adventureTitle": "Rainforest Camping Retreat",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzN11r_iLf4TKwdLjvk3y8TadhH_KAFOwlGQ&s",
+      "categoryName": "Camping Retreats",
+      "shortDescription": "Immerse yourself in the serenity of untouched rainforests.",
+      "adventureCost": 180,
+      "bookingAvailability": "Few Spots Left",
+      "location": "Amazon Rainforest, Brazil",
+      "duration": "4 Days",
+      "adventureLevel": "Intermediate",
+      "includedItems": [
+        "Camping tent",
+        "Sleeping bag",
+        "Meals",
+        "Eco-friendly toiletries"
+      ],
+      "ecoFriendlyFeatures": [
+        "Solar-powered lights",
+        "Compostable waste system",
+        "Biodegradable supplies"
+      ],
+      "maxGroupSize": 12,
+      "specialInstructions": [
+        "Apply insect repellent frequently.",
+        "Avoid disturbing local flora and fauna.",
+        "Bring a flashlight with extra batteries."
+      ]
+    },
+    {
+      "id": "005",
+      "adventureTitle": "Mangrove Kayaking Expedition",
+      "image": "https://www.silverwavetours.com/img/sundarban-trip.jpg",
+      "categoryName": "River Adventures",
+      "shortDescription": "Paddle through tranquil mangroves and observe rich biodiversity.",
+      "adventureCost": 150,
+      "bookingAvailability": "Available",
+      "location": "Sundarbans, Bangladesh",
+      "duration": "1 Day",
+      "adventureLevel": "Beginner",
+      "includedItems": [
+        "Kayak and paddles",
+        "Life jacket",
+        "Refreshments",
+        "Guide"
+      ],
+      "ecoFriendlyFeatures": [
+        "Non-motorized transport",
+        "Recyclable equipment",
+        "Support for mangrove restoration"
+      ],
+      "maxGroupSize": 5,
+      "specialInstructions": [
+        "Avoid loud noises to protect wildlife.",
+        "Carry sunscreen and a hat.",
+        "Stay hydrated throughout the trip."
+      ]
+    }
+  ]
+  
