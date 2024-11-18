@@ -16,12 +16,12 @@ const Header = () => {
       <li>
         <NavLink className={({ isActive}) =>
     isActive ? "text-green-600 font-semibold" : ""
-  } to={"/updateProfile"}>Update Profile</NavLink>
+  } to={"/auth/updateprofile"}>Update Profile</NavLink>
       </li>
       <li>
         <NavLink className={({ isActive}) =>
     isActive ? "text-green-600 font-semibold" : ""
-  } to={"/profile"}>Profile</NavLink>
+  } to={"/auth/profile"}>My Profile</NavLink>
       </li>
     </>
   );

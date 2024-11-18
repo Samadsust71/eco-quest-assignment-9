@@ -7,6 +7,8 @@ import Adventure from "../components/Adventure";
 import Registration from "../pages/Registration";
 import AdventureDetails from "../pages/AdventureDetails";
 import PrivateRoute from "./PrivateRoute";
+import MyProfile from "../pages/MyProfile";
+import UpdateProfile from "../pages/UpdateProfile";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +36,14 @@ const router = createBrowserRouter([
           const singleData = data.find((d) => d.id === params.id);
           return singleData;
         },
+      },
+      {
+        path: "/auth/profile",
+        element: <PrivateRoute><MyProfile /></PrivateRoute>,
+      },
+      {
+        path: "/auth/updateprofile",
+        element: <PrivateRoute><UpdateProfile /></PrivateRoute>,
       },
 
       {
