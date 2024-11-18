@@ -1,8 +1,36 @@
-# React + Vite
+# EcoQuest - Adventure Awaits 🌍
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Purpose
+EcoQuest is a platform designed for eco-conscious travelers who seek thrilling and sustainable adventures. Our goal is to connect individuals with guided activities that embrace nature while promoting environmental conservation. From breathtaking mountain treks to tranquil kayaking in mangroves, each adventure is carefully crafted to provide a unique and eco-friendly experience.
 
-Currently, two official plugins are available:
+## Live URL
+Visit the live version of the project here: [EcoQuest](https://eco-quest-37f67.web.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
+
+## Key Features
+- **Dynamic Adventure Listings**: Explore a wide range of adventures, each with unique details like cost, duration, and eco-friendly features.
+- **Interactive Design**: Clean and responsive UI designed using Tailwind CSS and DaisyUI for a seamless user experience across devices.
+- **Adventure Details Modal**: View complete details of each adventure, including included items, special instructions, and group size.
+- **Language Support**: Displays the languages spoken by guides, ensuring communication accessibility for all users.
+- **Eco-Friendly Focus**: Highlights eco-conscious practices such as sustainable accommodations and zero-waste policies.
+
+---
+
+## Tech Stack
+- **Frontend**: React.js (with React Router for navigation)
+- **Styling**: Tailwind CSS and DaisyUI for modern, responsive design.
+- **State Management**: React Context API for managing user and adventure data.
+
+---
+
+## NPM Packages Used
+- **[react-router-dom](https://www.npmjs.com/package/react-router-dom)**: For client-side routing and navigation.
+- **[react-icons](https://www.npmjs.com/package/react-icons)**: For adding visually appealing icons.
+- **[aos](https://www.npmjs.com/package/aos)**: For implementing scroll animations.
+- **[tailwindcss](https://www.npmjs.com/package/tailwindcss)**: Utility-first CSS framework for styling.
+- **[daisyui](https://www.npmjs.com/package/daisyui)**: Tailwind CSS component library for pre-built styled components.
+
+---
+
+
