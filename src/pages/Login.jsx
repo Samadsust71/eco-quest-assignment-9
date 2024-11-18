@@ -9,7 +9,7 @@ const Login = () => {
   const [showPass, setShowPass] = useState(false);
   const location = useLocation();
   const navigate = useNavigate()
-  const {signInUser,setUser,signInWithGoogle} = useContext(AuthContext)
+  const {signInUser,setUser,signInWithGoogle,emailInfo} = useContext(AuthContext)
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -50,6 +50,7 @@ const Login = () => {
             <input
               type="email"
               name="email"
+              ref={emailInfo}
               placeholder="email"
               className="input input-bordered"
               required
