@@ -2,8 +2,10 @@ import React from "react";
 import Header from "../components/Header";
 import { Outlet } from "react-router-dom";
 import Footer from "../components/Footer";
+import useDynamicTitle from "../dynamicTitleHook/useDynamicTitle";
 
 const RootLayouts = () => {
+  useDynamicTitle()
   return (
     <div>
       <header>
