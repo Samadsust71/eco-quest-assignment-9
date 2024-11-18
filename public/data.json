@@ -3,6 +3,7 @@
       "id": "001",
       "adventureTitle": "Mystical Mountain Trek",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHpI90Tf6iIwEDkKWzLCdWDSpbQhDOnZQ0Lg&s",
+      "img":"https://worldexpeditions.com/croppedImages/Indian-Sub-Continent/Great-Himalaya-Trail/Ghunsa-Himalayas-Nepal-276200-1920px-16x7.jpg",
       "categoryName": "Mountain Treks",
       "shortDescription": "Experience the thrill of trekking through breathtaking mountain landscapes.",
       "adventureCost": 250,
@@ -32,6 +33,7 @@
       "id": "002",
       "adventureTitle": "Ocean Dive Expedition",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ1OYXg1bbT6ReYblgo_ZJV--TkzqcGKqfkQ&s",
+      "img":"https://images.sbs.com.au/dims4/default/9ff342c/2147483647/strip/true/crop/1600x900+0+0/resize/1280x720!/quality/90/?url=http%3A%2F%2Fsbs-au-brightspot.s3.amazonaws.com%2Fdrupal%2Fnews%2Fpublic%2Fbd86f20d-9aec-4083-8163-11688dae2dec_1561512709.jpeg",
       "categoryName": "Ocean Dives",
       "shortDescription": "Dive into the crystal-clear waters to explore vibrant coral reefs and marine life.",
       "adventureCost": 300,
@@ -61,6 +63,7 @@
       "id": "003",
       "adventureTitle": "Safari Adventure",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYq6Cx3wsvxGZSYwG6iVJEB-gwDeDiRDDzWg&s",
+      "img":"https://www.arushapark.com/wp-content/uploads/2022/06/Serengeti-National-Park-1.jpg",
       "categoryName": "Wildlife Safaris",
       "shortDescription": "Discover the majestic wildlife on this eco-conscious safari.",
       "adventureCost": 400,
@@ -90,6 +93,7 @@
       "id": "004",
       "adventureTitle": "Rainforest Camping Retreat",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzN11r_iLf4TKwdLjvk3y8TadhH_KAFOwlGQ&s",
+      "img":"https://www.thesmoothescape.com/wp-content/uploads/2023/01/Amazon-jungle-header-2.jpg",
       "categoryName": "Camping Retreats",
       "shortDescription": "Immerse yourself in the serenity of untouched rainforests.",
       "adventureCost": 180,
@@ -118,7 +122,8 @@
     {
       "id": "005",
       "adventureTitle": "Mangrove Kayaking Expedition",
-      "image": "https://www.silverwavetours.com/img/sundarban-trip.jpg",
+      "image": "https://bangladeshpost.net/webroot/uploads/featureimage/2023-02/63ee5786a25cb.jpg",
+      "img":"https://i.natgeofe.com/n/a50f7239-ff6d-4874-9448-25d94d8d1c80/sundarbans-bangladesh_16x9.jpg?w=1200",
       "categoryName": "River Adventures",
       "shortDescription": "Paddle through tranquil mangroves and observe rich biodiversity.",
       "adventureCost": 150,
@@ -143,6 +148,23 @@
         "Carry sunscreen and a hat.",
         "Stay hydrated throughout the trip."
       ]
+    },
+    {
+      "id": "006",
+      "adventureTitle": "Aurora Borealis Adventure",
+      "image": "https://olavthon.imagevault.media/publishedmedia/rcberco0f85w1vokzju7/2g5kaDIR1JsqF2wBKp2aqJgzTrq-2-1.webp",
+      "img":"https://d19lgisewk9l6l.cloudfront.net/assetbank/Northern_Lights_over_Tromso_Norway_Credit_Truls_Tiller_32481.jpg",
+      "categoryName": "Northern Lights Tours",
+      "shortDescription": "Witness the mesmerizing Northern Lights in the Arctic Circle.",
+      "adventureCost": 350,
+      "bookingAvailability": "Available",
+      "location": "Tromsø, Norway",
+      "duration": "3 Nights",
+      "adventureLevel": "Intermediate",
+      "includedItems": ["Thermal suits", "Professional guide", "Hot beverages", "Photography assistance"],
+      "ecoFriendlyFeatures": ["Eco-certified transport", "Minimized light pollution", "Support for local Arctic communities"],
+      "maxGroupSize": 8,
+      "specialInstructions": ["Wear layered clothing for extreme cold.", "Carry a good quality camera for photography.", "Follow safety guidelines during outdoor activities."]
     }
   ]
   

@@ -18,8 +18,8 @@ const OurGuides = () => {
   }, []);
 
   return (
-    <div className="my-6 space-y-4 bg-gray-300 rounded-xl py-10">
-      <div>
+    <div className="my-6 space-y-4 bg-[#202d2e] rounded-xl py-10 text-white">
+      <div className="text-center">
         <Heading
           title={
             "No matter where you come from, our guides will be able to understand you."

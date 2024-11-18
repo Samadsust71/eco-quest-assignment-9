@@ -41,6 +41,10 @@ const Banner = () => {
             <FaArrowRight className="text-xl"/>
             </a>
           </div>
+          <div className="absolute left-5 right-5 top-1/2 flex flex-col -translate-y-1/2 transform duration-100 gap-2">
+            <h1 className="lg:text-6xl text-2xl text-white lg:w-[60%]">Explore the sights <br /> of the Himalayas</h1>
+            <p className="text-gray-300">A place where nature and adventure unite</p>
+          </div>
         </div>
         <div id="slide3" className="carousel-item relative w-full rounded-xl">
           <img
@@ -55,6 +59,10 @@ const Banner = () => {
             <FaArrowRight className="text-xl"/>
             </a>
           </div>
+          <div className="absolute left-5 right-5 top-1/2 flex flex-col -translate-y-1/2 transform duration-100 gap-2">
+            <h1 className="lg:text-6xl text-2xl text-white lg:w-[60%]">Explore the sights <br /> of the Serengeti National Park</h1>
+            <p className="text-gray-300">A place where nature and adventure unite</p>
+          </div>
         </div>
         <div id="slide4" className="carousel-item relative w-full rounded-xl">
           <img
@@ -68,6 +76,10 @@ const Banner = () => {
             <a href="#slide1" className="btn btn-circle btn-outline text-white">
             <FaArrowRight className="text-xl"/>
             </a>
+          </div>
+          <div className="absolute left-5 right-5 top-1/2 flex flex-col -translate-y-1/2 transform duration-100 gap-2">
+            <h1 className="lg:text-6xl text-2xl text-white lg:w-[60%]">Explore the sights <br /> of the Sundarbans</h1>
+            <p className="text-gray-300">A place where nature and adventure unite</p>
           </div>
         </div>
       </div>

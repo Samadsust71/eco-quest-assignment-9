@@ -50,7 +50,7 @@ const ResetPassword = () => {
             )}
           </div>
           <div className="form-control mt-6">
-            <button className="btn bg-green-600 text-white font-bold hover:bg-green-600">
+            <button className="btn bg-[#0a5784] text-white font-bold hover:bg-[#0a5784]">
               {" "}
               Reset Password
             </button>

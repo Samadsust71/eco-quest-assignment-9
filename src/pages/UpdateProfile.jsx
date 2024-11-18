@@ -26,7 +26,7 @@ const UpdateProfile = () => {
       };  
   return (
     <div className="flex flex-col justify-center items-center my-10">
-      <div className="card bg-base-100 w-full max-w-xl shrink-0 shadow-2xl">
+      <div className="card bg-base-100 w-full max-w-xl shrink-0 border">
       <h1 className="text-2xl font-bold text-center pt-6">Update Profile!</h1>
         <form onSubmit={handleSubmit} className="card-body">
           <div className="form-control">
@@ -63,7 +63,7 @@ const UpdateProfile = () => {
             )}
           </div>
           <div className="form-control mt-6">
-            <button className="btn bg-green-600 text-white font-bold hover:bg-green-600"> Update Information</button>
+            <button className="btn bg-[#0a5784] text-white font-bold hover:bg-[#0a5784]"> Update Information</button>
           </div>
         </form>
       </div>

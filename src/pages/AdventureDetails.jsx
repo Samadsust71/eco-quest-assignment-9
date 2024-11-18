@@ -7,7 +7,7 @@ const AdventureDetails = () => {
   const {
     id,
     adventureTitle,
-    image,
+    img,
     categoryName,
     shortDescription,
     adventureCost,
@@ -26,20 +26,20 @@ const AdventureDetails = () => {
     const currentHour = currentTime.getHours();
 
     if (currentHour >= 10 && currentHour < 20) {
-      // Open Google Meet during consultation hours
+      
       window.open("https://meet.google.com", "_blank");
     } else {
-      // Show consultation time modal
-      alert("Consultation is available only between 10:00 AM and 8:00 PM.");
+      document.getElementById('my_modal_5').showModal()
+      
     }
   };
   return (
-    <div className="card w-full bg-base-100 shadow-xl p-6 my-6">
+    <div className="card w-full bg-base-100 border p-6 my-6">
       <figure>
         <img
-          src={image}
+          src={img}
           alt={adventureTitle}
-          className="rounded-lg h-96 w-full object-cover"
+          className="rounded-lg h-[400px] w-full object-cover"
         />
       </figure>
       <div className="card-body">
@@ -61,11 +61,11 @@ const AdventureDetails = () => {
             <p className="text-gray-700">Booking: {bookingAvailability}</p>
           </div>
           <div className="flex items-center gap-2">
-            <FaClock className="text-green-600" />
+            <FaClock className="text-[#0a5784]" />
             <p className="text-gray-700">Duration: {duration}</p>
           </div>
           <div className="flex items-center gap-2">
-            <FaUsers className="text-primary" />
+            <FaUsers className="text-[#0a5784a9]" />
             <p className="text-gray-700">
               Max Group Size: {maxGroupSize}
             </p>
@@ -113,12 +113,12 @@ const AdventureDetails = () => {
         </div>
 
         <div className="card-actions mt-6 flex justify-between items-center">
-          <p className="text-lg font-bold text-green-600">
+          <p className="text-lg font-bold">Cost: 
             ${adventureCost}
           </p>
           <button
             onClick={handleTalkWithExpert}
-            className="btn bg-green-600 hover:bg-green-600 font-semibold text-white"
+            className="btn bg-[#0a5784] hover:bg-[#0a5784] font-semibold text-white"
           >
             Talk with Expert
           </button>

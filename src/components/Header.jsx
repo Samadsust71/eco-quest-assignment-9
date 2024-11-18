@@ -10,17 +10,17 @@ const Header = () => {
     <>
       <li>
         <NavLink  className={({ isActive}) =>
-    isActive ? "text-green-600 font-semibold" : ""
+    isActive ? "btn bg-[#0a5784] text-white font-semibold hover:bg-[#0a5784]" : "text-neutral"
   } to={"/"}>Home</NavLink>
       </li>
       <li>
         <NavLink className={({ isActive}) =>
-    isActive ? "text-green-600 font-semibold" : ""
+    isActive ? "btn bg-[#0a5784] text-white font-semibold hover:bg-[#0a5784]" : "text-neutral"
   } to={"/auth/updateprofile"}>Update Profile</NavLink>
       </li>
       <li>
         <NavLink className={({ isActive}) =>
-    isActive ? "text-green-600 font-semibold" : ""
+    isActive ? "btn bg-[#0a5784] text-white font-semibold hover:bg-[#0a5784]" : "text-neutral"
   } to={"/auth/profile"}>My Profile</NavLink>
       </li>
     </>
@@ -52,7 +52,7 @@ const Header = () => {
            user &&user?.photoURL && <img title={user?.displayName} src={user.photoURL} className="h-10 w-10 rounded-full object-cover" alt="user" />
           }
         {
-          user ?<button onClick={logOutUser} className="btn rounded-xl bg-green-600 text-white font-semibold">Logout</button> :<button onClick={()=>navigate('/auth/login')} className="btn rounded-xl bg-green-600 text-white font-semibold">Login</button>
+          user ?<button onClick={logOutUser} className="btn rounded-xl bg-[#0a5784] text-white font-semibold hover:bg-[#0a5784]">Logout</button> :<button onClick={()=>navigate('/auth/login')} className="btn rounded-xl bg-[#0a5784] text-white font-semibold hover:bg-[#0a5784]">Login</button>
         }
         </div>
       </div>

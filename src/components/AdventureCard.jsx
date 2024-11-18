@@ -5,7 +5,7 @@ const AdventureCard = ({ adventure = {} }) => {
   const navigate = useNavigate()
   const { id, adventureTitle, image, ecoFriendlyFeatures } = adventure || {};
   return (
-    <div className="card bg-base-100  shadow-xl">
+    <div className="card bg-base-100 border">
       <figure className="px-10 pt-10">
         <img
           src={image}
@@ -25,7 +25,7 @@ const AdventureCard = ({ adventure = {} }) => {
           }
           </ul>
         <div className="card-actions">
-          <button onClick={()=>navigate(`/adventure/${id}`)} className="btn bg-green-600 text-white font-semibold">Explore Now</button>
+          <button onClick={()=>navigate(`/adventure/${id}`)} className="btn border bg-white border-[#0a5784] text-neutral font-semibold hover:bg-[#0a5784] hover:text-white">Explore Now</button>
         </div>
       </div>
     </div>

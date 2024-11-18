@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import toast from "react-hot-toast";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 
 const Login = () => {
   const [errorMessage, setErrorMessage] = useState("");
@@ -39,8 +39,8 @@ const Login = () => {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center my-10">
-      <div className="card bg-base-100 w-full max-w-xl shrink-0 shadow-2xl">
+    <div className="flex flex-col justify-center items-center my-10 max-w-xl mx-auto">
+      <div className="card bg-base-100 w-full max-w-xl shrink-0 border">
       <h1 className="text-2xl font-bold text-center pt-6">Login now!</h1>
         <form onSubmit={handleSubmit} className="card-body">
           <div className="form-control">
@@ -89,20 +89,23 @@ const Login = () => {
             )}
           </div>
           <div className="form-control mt-6">
-            <button className="btn bg-green-600 text-white font-bold hover:bg-green-600">Login</button>
+            <button className="btn bg-[#0a5784] text-white font-bold hover:bg-[#0a5784]">Login</button>
           </div>
         </form>
-        <div className="divider">OR</div>
-        <div className="px-4 mb-2">
-          <button onClick={handleGoogleLogin} className="btn w-full">Sign In with Google</button>
-        </div>
+        
+       
         <p className="text-center mb-6">
           Don"t have an account?{" "}
-          <Link to={"/auth/registration"} className="text-green-600">
+          <Link to={"/auth/registration"} className="text-[#0a7c84fd]">
             Register
           </Link>{" "}
         </p>
       </div>
+      <div className="divider">OR</div>
+      <button onClick={handleGoogleLogin} className="px-4 flex items-center justify-center gap-2 py-2 border border-[#0a5784] w-full rounded-lg text-[#0a5784]  ">
+        <FaGoogle className="text-[#0a5784]"/>
+          <span>Sign In with Google</span>
+        </button>
     </div>
   );
 };

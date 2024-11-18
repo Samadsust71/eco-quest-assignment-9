@@ -3,11 +3,12 @@ import Header from "../components/Header";
 import { Outlet } from "react-router-dom";
 import Footer from "../components/Footer";
 import useDynamicTitle from "../dynamicTitleHook/useDynamicTitle";
+import Modal from "../components/Modal";
 
 const RootLayouts = () => {
   useDynamicTitle()
   return (
-    <div>
+    <div className="font-lato">
       <header>
         <Header></Header>
       </header>
@@ -17,6 +18,7 @@ const RootLayouts = () => {
       <footer>
         <Footer></Footer>
       </footer>
+      <Modal/>
     </div>
   );
 };
