@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Login = () => {
+
+    
   return (
     <div className="flex flex-col justify-center items-center my-10">
       <div className="card bg-base-100 w-full max-w-xl shrink-0 shadow-2xl">
