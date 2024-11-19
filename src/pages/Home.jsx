@@ -2,6 +2,7 @@ import React from 'react'
 import Banner from '../components/Banner'
 import { Outlet } from 'react-router-dom'
 import OurGuides from '../components/OurGuides'
+import Awards from '../components/Awards'
 
 
 
@@ -16,8 +17,11 @@ const Home = () => {
       <section>
       <Outlet></Outlet>
       </section>
-      <div>
+      <div className='my-6'>
         <OurGuides></OurGuides>
+      </div>
+      <div>
+        <Awards></Awards>
       </div>
      
     </div>

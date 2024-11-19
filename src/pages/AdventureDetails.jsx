@@ -34,7 +34,7 @@ const AdventureDetails = () => {
     }
   };
   return (
-    <div className="card w-full bg-base-100 border p-6 my-6">
+    <div className="card w-full bg-gradient-to-b from-blue-50 via-sky-100 to-white shadow-lg md:p-6 my-6">
       <figure>
         <img
           src={img}
@@ -118,7 +118,7 @@ const AdventureDetails = () => {
           </p>
           <button
             onClick={handleTalkWithExpert}
-            className="btn bg-[#0a5784] hover:bg-[#0a5784] font-semibold text-white"
+            className="px-4 py-3 rounded-lg bg-[#0a5784] hover:bg-[#0a5784] font-semibold text-white"
           >
             Talk with Expert
           </button>

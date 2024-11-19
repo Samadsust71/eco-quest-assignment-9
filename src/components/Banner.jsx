@@ -8,7 +8,7 @@ import img4 from "../assets/sundarban.jpg";
 
 const Banner = () => {
   return (
-    <div className="py-10">
+    <div className="py-10 w-11/12 mx-auto">
       <div className="carousel w-full max-h-[calc(100vh-42px)] rounded-xl">
         <div id="slide1" className="carousel-item relative w-full rounded-xl">
           <img

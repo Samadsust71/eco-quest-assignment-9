@@ -24,7 +24,7 @@ const ResetPassword = () => {
   };
   return (
     <div className="flex flex-col justify-center items-center my-10">
-      <div className="card bg-base-100 w-full max-w-xl shrink-0 shadow-2xl">
+      <div className="card bg-gradient-to-b from-blue-50 via-sky-100 to-white w-full max-w-xl shrink-0 shadow-2xl">
         <h1 className="text-2xl font-bold text-center pt-6">Reset Password</h1>
         <form onSubmit={handleSubmit} className="card-body">
           <div className="form-control">
@@ -36,7 +36,7 @@ const ResetPassword = () => {
               name="email"
               defaultValue={emailInfo.current?.value}
               placeholder={"Enter your email"}
-              className="input input-bordered"
+              className="input input-bordered bg-white"
               required
             />
           </div>

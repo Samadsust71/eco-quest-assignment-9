@@ -11,7 +11,10 @@ export default {
         lato:[
            "Lato", "sans-serif"
         ]
-      }
+      },
+      animation: {
+        'spin-slow': 'spin 4s linear infinite',
+      },
     },
   },
   plugins: [
@@ -20,7 +23,9 @@ export default {
   daisyui:{
     themes: [
       "winter",
-      "forest" 
+      "forest" ,
+      "nord",
+
     ],
   }
   }

@@ -6,6 +6,7 @@ import franceFlag from "../assets/france.jpg";
 import germanFlag from "../assets/Germany.webp";
 import Heading from "./Heading";
 import { useEffect } from "react";
+import { motion } from "framer-motion";
 
 const OurGuides = () => {
   useEffect(() => {
@@ -18,7 +19,7 @@ const OurGuides = () => {
   }, []);
 
   return (
-    <div className="my-6 space-y-4 bg-[#202d2e] rounded-xl py-10 text-white">
+    <div className="space-y-4 bg-gradient-to-b from-blue-50 via-sky-100 to-white py-10 md:py-20  text-gray-800">
       <div className="text-center">
         <Heading
           title={
@@ -32,48 +33,85 @@ const OurGuides = () => {
         data-aos="flip-right"
       >
         <div className="flex flex-col items-center justify-center gap-1">
-          <div>
-            <img
-              src={banglaFlag}
-              className="h-12 w-12 rounded-full object-cover"
-              alt=""
-            />
+          <div className="animate-spin-slow">
+            <motion.div
+              className="rounded-full"
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
+              }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.3 }}
+            >
+              <img
+                src={banglaFlag}
+                className="h-12 w-12 rounded-full object-cover"
+                alt="France Flag"
+              />
+            </motion.div>
           </div>
-          <p>Bangla</p>
+          <p className="text-gray-600 font-semibold">Bangla</p>
         </div>
         <div className="flex flex-col items-center justify-center gap-1">
-          <div>
-          <img
-          src={engFlag}
-          className="h-12 w-12 rounded-full object-cover"
-          alt=""
-        />
+          <div className="animate-spin-slow">
+            <motion.div
+              className="rounded-full"
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
+              }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.3 }}
+            >
+              <img
+                src={engFlag}
+                className="h-12 w-12 rounded-full object-cover"
+                alt="France Flag"
+              />
+            </motion.div>
           </div>
-          <p>English</p>
+          <p className="text-gray-600 font-semibold">English</p>
         </div>
         <div className="flex flex-col items-center justify-center gap-1">
-          <div>
-          <img
-          src={franceFlag}
-          className="h-12 w-12 rounded-full object-cover"
-          alt=""
-        />
+          <div className="animate-spin-slow">
+            <motion.div
+              className="rounded-full"
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
+              }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.3 }}
+            >
+              <img
+                src={franceFlag}
+                className="h-12 w-12 rounded-full object-cover"
+                alt="France Flag"
+              />
+            </motion.div>
           </div>
-          <p>French</p>
+          <p className="text-gray-600 font-semibold">French</p>
         </div>
         <div className="flex flex-col items-center justify-center gap-1">
-          <div>
-          <img
-          src={germanFlag}
-          className="h-12 w-12 rounded-full object-cover"
-          alt=""
-        />
+          <div className="animate-spin-slow">
+            <motion.div
+              className="rounded-full"
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
+              }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.3 }}
+            >
+              <img
+                src={germanFlag}
+                className="h-12 w-12 rounded-full object-cover"
+                alt="France Flag"
+              />
+            </motion.div>
           </div>
-          <p>Deutsch</p>
+          <p className="text-gray-600 font-semibold">Deutsch</p>
         </div>
-        
-        
-        
       </div>
     </div>
   );

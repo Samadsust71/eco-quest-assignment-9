@@ -9,7 +9,7 @@ const MyProfile = () => {
 
   return (
     <div className="flex justify-center bg-gray-100 items-center min-h-screen  py-6 rounded-xl">
-      <div className="card  bg-base-100 border p-6">
+      <div className="card  bg-gradient-to-b from-blue-50 via-sky-100 to-white border p-6">
         <figure className="w-32 h-32 mx-auto">
           <img
             src={user?.photoURL || "https://via.placeholder.com/150"}

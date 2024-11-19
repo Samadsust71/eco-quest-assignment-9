@@ -26,7 +26,7 @@ const UpdateProfile = () => {
       };  
   return (
     <div className="flex flex-col justify-center items-center my-10">
-      <div className="card bg-base-100 w-full max-w-xl shrink-0 border">
+      <div className="card bg-gradient-to-b from-blue-50 via-sky-100 to-white w-full max-w-xl shrink-0 border">
       <h1 className="text-2xl font-bold text-center pt-6">Update Profile!</h1>
         <form onSubmit={handleSubmit} className="card-body">
           <div className="form-control">
@@ -37,7 +37,7 @@ const UpdateProfile = () => {
               type="text"
               name="name"
               placeholder="Enter your name"
-              className="input input-bordered"
+              className="input input-bordered bg-white"
               required
             />
           </div>
@@ -49,7 +49,7 @@ const UpdateProfile = () => {
                type="text"
               name="photo"
               placeholder="Enter your photo url"
-              className="input input-bordered"
+              className="input input-bordered bg-white"
               
             />
           </div>

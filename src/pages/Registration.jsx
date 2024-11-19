@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 
 const Registration = () => {
-  const { createUser, setUser, updateUserProfile, signInWithGoogle } =
+  const { createUser, setUser, updateUserProfile, signInWithGoogle,setLoading } =
     useContext(AuthContext);
   const [errorMessage, setErrorMessage] = useState();
   const [showPass, setShowPass] = useState(false);
@@ -41,6 +41,7 @@ const Registration = () => {
         const user = result.user;
         setUser(user);
         updateUserProfile(name, photo);
+        setLoading(false)
         e.target.reset();
         toast.success("Registration Succesful !");
         navigate("/");
@@ -58,7 +59,7 @@ const Registration = () => {
 
   return (
     <div className="flex flex-col justify-center items-center my-10 max-w-xl mx-auto">
-      <div className="card bg-base-100 w-full max-w-xl shrink-0 border">
+      <div className="card bg-gradient-to-b from-blue-50 via-sky-100 to-white w-full max-w-xl shrink-0 border">
         <h1 className="text-2xl font-bold text-center pt-6">Register now!</h1>
         <form onSubmit={handleSubmit} className="card-body">
           <div className="form-control">
@@ -69,7 +70,7 @@ const Registration = () => {
               type="text"
               name="name"
               placeholder="name"
-              className="input input-bordered"
+              className="input input-bordered bg-white"
               required
             />
           </div>
@@ -81,7 +82,7 @@ const Registration = () => {
               type="text"
               name="photo"
               placeholder="photo url"
-              className="input input-bordered"
+              className="input input-bordered bg-white"
               required
             />
           </div>
@@ -93,7 +94,7 @@ const Registration = () => {
               type="email"
               name="email"
               placeholder="email"
-              className="input input-bordered"
+              className="input input-bordered bg-white"
               required
             />
           </div>
@@ -105,7 +106,7 @@ const Registration = () => {
               type={showPass ? "text" : "password"}
               name="password"
               placeholder="password"
-              className="input input-bordered"
+              className="input input-bordered bg-white"
               required
             />
             <button
@@ -125,7 +126,7 @@ const Registration = () => {
             )}
           </div>
           <div className="form-control mt-6">
-            <button className="btn bg-[#0a5784] text-white font-bold hover:bg-[#0a5784]">
+            <button className="py-2 rounded-lg bg-[#0a5784] text-white font-bold hover:bg-[#0a5784]">
               Register
             </button>
           </div>
@@ -141,7 +142,7 @@ const Registration = () => {
       <div className="divider">OR</div>
       <button
         onClick={handleGoogleLogin}
-        className="px-4 flex items-center justify-center gap-2 py-2 border border-[#0a5784] w-full rounded-lg text-[#0a5784]"
+        className="px-4 flex items-center justify-center gap-2 py-2 border border-[#0a5784] bg-gradient-to-b from-blue-50 via-sky-100 to-white w-full rounded-lg text-[#0a5784]"
       >
         <FaGoogle className="text-[#0a5784]" />
         <span>Sign In with Google</span>

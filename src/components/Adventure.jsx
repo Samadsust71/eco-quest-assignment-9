@@ -7,7 +7,7 @@ const Adventure = () => {
     const data = useLoaderData()
     
   return (
-    <div>
+    <div className='w-11/12 mx-auto'>
       <div>
       <Heading title={'Adventure'} subTitle={'Live a unique experience full of adventures and emotions. Come and experience with us an immersive journey in the middle of the jungle and surrounded by animals in an environment of harmony and freedom. Live life like never before.'}
       ></Heading>
