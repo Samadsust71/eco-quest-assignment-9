@@ -39,7 +39,7 @@ const AdventureDetails = () => {
         <img
           src={img}
           alt={adventureTitle}
-          className="rounded-lg h-[400px] w-full object-cover"
+          className="rounded-lg h-[600px] w-full object-cover"
         />
       </figure>
       <div className="card-body">

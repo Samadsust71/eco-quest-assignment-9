@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import userIcon from "../assets/userIcon.jpg"
 import { AuthContext } from '../provider/AuthProvider'
 import { useNavigate } from 'react-router-dom'
 
@@ -12,7 +13,7 @@ const MyProfile = () => {
       <div className="card  bg-gradient-to-b from-blue-50 via-sky-100 to-white border p-6">
         <figure className="w-32 h-32 mx-auto">
           <img
-            src={user?.photoURL || "https://via.placeholder.com/150"}
+            src={user?.photoURL ||userIcon }
             alt="Profile"
             className=" h-32 w-32 object-cover rounded-full border-4 border-[#0a5784]"
           />
@@ -26,7 +27,7 @@ const MyProfile = () => {
           <div className="card-actions justify-center mt-4">
             <button
               onClick={() => navigate("/auth/updateprofile")}
-              className="btn bg-[#0a5784] text-white font-bold hover:bg-[#0a5784]"
+              className="btn bg-[#0a5784] text-white font-bold hover:bg-[#084a63] active:bg-[#06394e]"
             >
               Update Profile
             </button>

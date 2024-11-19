@@ -5,8 +5,14 @@ import toast from "react-hot-toast";
 import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 
 const Registration = () => {
-  const { createUser, setUser, updateUserProfile, signInWithGoogle,setLoading } =
-    useContext(AuthContext);
+  const {
+    createUser,
+    setUser,
+    updateUserProfile,
+    signInWithGoogle,
+    setLoading,
+    loading
+  } = useContext(AuthContext);
   const [errorMessage, setErrorMessage] = useState();
   const [showPass, setShowPass] = useState(false);
   const navigate = useNavigate();
@@ -35,26 +41,34 @@ const Registration = () => {
       setErrorMessage("Password must contain a lowercase letter");
       return;
     }
-
+     
     createUser(email, password)
       .then((result) => {
         const user = result.user;
         setUser(user);
         updateUserProfile(name, photo);
-        setLoading(false)
+        setLoading(false);
         e.target.reset();
         toast.success("Registration Succesful !");
         navigate("/");
       })
-      .catch((err) => setErrorMessage(err.message));
+    .catch((err) => {
+      setLoading(false);
+      setErrorMessage(err.message)
+    });
   };
 
   const handleGoogleLogin = () => {
+   
     signInWithGoogle()
       .then(() => {
+        setLoading(false)
         navigate("/");
       })
-      .catch((err) => setErrorMessage(err.message));
+      .catch((err) => {
+        setLoading(false)
+        setErrorMessage(err.message)
+      });
   };
 
   return (
@@ -69,7 +83,7 @@ const Registration = () => {
             <input
               type="text"
               name="name"
-              placeholder="name"
+              placeholder="Enter your name"
               className="input input-bordered bg-white"
               required
             />
@@ -81,9 +95,9 @@ const Registration = () => {
             <input
               type="text"
               name="photo"
-              placeholder="photo url"
+              placeholder="Enter your photo url"
               className="input input-bordered bg-white"
-              required
+              
             />
           </div>
           <div className="form-control">
@@ -93,7 +107,7 @@ const Registration = () => {
             <input
               type="email"
               name="email"
-              placeholder="email"
+              placeholder="Enter your email"
               className="input input-bordered bg-white"
               required
             />
@@ -105,20 +119,22 @@ const Registration = () => {
             <input
               type={showPass ? "text" : "password"}
               name="password"
-              placeholder="password"
+              placeholder="Enter your password"
               className="input input-bordered bg-white"
               required
             />
             <button
+              type="button"
               onClick={() => setShowPass(!showPass)}
               className="btn btn-xs absolute right-2 top-12"
             >
-              {showPass ? <FaEyeSlash /> : <FaEye />}
+              {showPass ? <FaEye /> : <FaEyeSlash />}
             </button>
           </div>
+
           <div>
             {errorMessage && (
-              <label className="label">
+              <label className="label bg-red-100 p-2 rounded-md">
                 <span className="label-text text-xs text-red-600">
                   {errorMessage}
                 </span>
@@ -126,8 +142,11 @@ const Registration = () => {
             )}
           </div>
           <div className="form-control mt-6">
-            <button className="py-2 rounded-lg bg-[#0a5784] text-white font-bold hover:bg-[#0a5784]">
-              Register
+            <button 
+            disabled={loading}
+            className="py-2 rounded-lg bg-[#0a5784] text-white font-bold hover:bg-[#084a63] active:bg-[#06394e]">
+              {loading?'Registering...':'Register'}
+              
             </button>
           </div>
         </form>
@@ -142,10 +161,11 @@ const Registration = () => {
       <div className="divider">OR</div>
       <button
         onClick={handleGoogleLogin}
-        className="px-4 flex items-center justify-center gap-2 py-2 border border-[#0a5784] bg-gradient-to-b from-blue-50 via-sky-100 to-white w-full rounded-lg text-[#0a5784]"
+        disabled={loading}
+        className="px-4 flex items-center justify-center gap-2 py-2 border border-[#0a5784] bg-gradient-to-b from-blue-50 via-sky-100 to-white w-full rounded-lg text-[#0a5784] hover:bg-sky-200 active:bg-sky-300 transition-all"
       >
         <FaGoogle className="text-[#0a5784]" />
-        <span>Sign In with Google</span>
+        <span>{loading?'Signing...':"Sign In with Google"}</span>
       </button>
     </div>
   );

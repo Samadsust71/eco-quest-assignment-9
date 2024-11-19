@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 
 const UpdateProfile = () => {
-    const {updateUserProfile,setLoading}=useContext(AuthContext)
+    const {updateUserProfile,setLoading,loading}=useContext(AuthContext)
     const navigate = useNavigate()
     const [errorMessage, setErrorMessage] = useState("");
 
@@ -21,6 +21,7 @@ const UpdateProfile = () => {
             navigate(`/auth/profile`);
           })
           .catch((err) => {
+            setLoading(false)
             setErrorMessage(err.message);
           });
       };  
@@ -55,7 +56,7 @@ const UpdateProfile = () => {
           </div>
           <div>
           {errorMessage&& (
-              <label className="label">
+              <label className="label bg-red-100 p-2 rounded-md">
                 <span className="label-text text-xs text-red-600">
                   {errorMessage}
                 </span>
@@ -63,7 +64,11 @@ const UpdateProfile = () => {
             )}
           </div>
           <div className="form-control mt-6">
-            <button className="btn bg-[#0a5784] text-white font-bold hover:bg-[#0a5784]"> Update Information</button>
+            <button 
+            disabled={loading}
+            className="py-2 rounded-lg bg-[#0a5784] text-white font-bold hover:bg-[#084a63] active:bg-[#06394e]">
+               {loading?"Updating...":"Update Information"}
+            </button>
           </div>
         </form>
       </div>

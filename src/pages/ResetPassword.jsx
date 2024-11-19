@@ -3,7 +3,7 @@ import { AuthContext } from "../provider/AuthProvider";
 import { useNavigate } from "react-router-dom";
 
 const ResetPassword = () => {
-  const { passwordReset, setLoading, emailInfo } = useContext(AuthContext);
+  const { passwordReset, setLoading, emailInfo,loading } = useContext(AuthContext);
   const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
   const handleSubmit = (e) => {
@@ -19,6 +19,7 @@ const ResetPassword = () => {
         navigate("/auth/login")
       })
       .catch((err) => {
+        setLoading(false);
         setErrorMessage(err.message);
       });
   };
@@ -35,14 +36,14 @@ const ResetPassword = () => {
               type="email"
               name="email"
               defaultValue={emailInfo.current?.value}
-              placeholder={"Enter your email"}
+              placeholder="Enter your email"
               className="input input-bordered bg-white"
               required
             />
           </div>
           <div>
             {errorMessage && (
-              <label className="label">
+              <label className="label bg-red-100 p-2 rounded-md">
                 <span className="label-text text-xs text-red-600">
                   {errorMessage}
                 </span>
@@ -50,9 +51,11 @@ const ResetPassword = () => {
             )}
           </div>
           <div className="form-control mt-6">
-            <button className="btn bg-[#0a5784] text-white font-bold hover:bg-[#0a5784]">
-              {" "}
-              Reset Password
+            <button
+            disabled={loading}
+            className="py-2 rounded-lg bg-[#0a5784] text-white font-bold hover:bg-[#084a63] active:bg-[#06394e]">
+              {loading?"Resetting...":"Reset Password"}
+              
             </button>
           </div>
         </form>

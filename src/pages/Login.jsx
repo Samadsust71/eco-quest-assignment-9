@@ -9,7 +9,8 @@ const Login = () => {
   const [showPass, setShowPass] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
-  const { signInUser, setUser, signInWithGoogle, emailInfo } =
+  const { signInUser, setUser, signInWithGoogle, emailInfo , setLoading,
+    loading} =
     useContext(AuthContext);
 
   const handleSubmit = (e) => {
@@ -22,11 +23,13 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         setUser(user);
-        toast.success("Login Succesfull");
+        setLoading(false)
         e.target.reset();
+        toast.success("Login Succesfull");
         navigate(`${location?.state ? location.state : "/"}`);
       })
       .catch((err) => {
+        setLoading(false)
         setErrorMessage(err.message);
       });
   };
@@ -34,9 +37,13 @@ const Login = () => {
   const handleGoogleLogin = () => {
     signInWithGoogle()
       .then(() => {
+        setLoading(false)
         navigate(`${location?.state ? location.state : "/"}`);
       })
-      .catch((err) => setErrorMessage(err.message));
+      .catch((err) => {
+        setLoading(false)
+        setErrorMessage(err.message)
+      });
   };
 
   return (
@@ -53,7 +60,7 @@ const Login = () => {
                 type="email"
                 name="email"
                 ref={emailInfo}
-                placeholder="email"
+                placeholder="Enter your email"
                 className="input input-bordered bg-white"
                 required
               />
@@ -65,14 +72,16 @@ const Login = () => {
               <input
                 type={showPass ? "text" : "password"}
                 name="password"
-                placeholder="password"
+                placeholder="Enter your password"
                 className="input input-bordered bg-white"
               />
               <button
+              type="button"
                 onClick={() => setShowPass(!showPass)}
+          
                 className="btn btn-xs absolute right-2 top-12"
               >
-                {showPass ? <FaEyeSlash /> : <FaEye />}
+                {showPass ?  <FaEye /> :<FaEyeSlash /> }
               </button>
               <label className="label">
                 <Link
@@ -85,7 +94,7 @@ const Login = () => {
             </div>
             <div>
               {errorMessage && (
-                <label className="label">
+                <label className="label bg-red-100 p-2 rounded-md">
                   <span className="label-text text-xs text-red-600">
                     {errorMessage}
                   </span>
@@ -93,8 +102,10 @@ const Login = () => {
               )}
             </div>
             <div className="form-control mt-6">
-              <button className="py-2 rounded-lg bg-[#0a5784] text-white font-bold hover:bg-[#0a5784]">
-                Login
+              <button 
+              disabled={loading}
+              className="py-2 rounded-lg bg-[#0a5784] text-white font-bold hover:bg-[#084a63] active:bg-[#06394e]">
+                {loading?"Logging in...":"Login"}
               </button>
             </div>
           </form>
@@ -109,10 +120,11 @@ const Login = () => {
         <div className="divider">OR</div>
         <button
           onClick={handleGoogleLogin}
-          className="px-4 flex items-center justify-center gap-2 py-2 border border-[#0a5784] bg-gradient-to-b from-blue-50 via-sky-100 to-white w-full rounded-lg text-[#0a5784]"
+          disabled={loading}
+          className="px-4 flex items-center justify-center gap-2 py-2 border border-[#0a5784] bg-gradient-to-b from-blue-50 via-sky-100 to-white w-full rounded-lg text-[#0a5784] hover:bg-sky-200 active:bg-sky-300 transition-all"
         >
           <FaGoogle className="text-[#0a5784]" />
-          <span>Sign In with Google</span>
+          <span>{loading?"Signing in...":"Sign In with Google"}</span>
         </button>
       </div>
     </div>

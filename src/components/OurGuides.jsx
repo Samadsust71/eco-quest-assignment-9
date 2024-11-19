@@ -19,7 +19,7 @@ const OurGuides = () => {
   }, []);
 
   return (
-    <div className="space-y-4 bg-gradient-to-b from-blue-50 via-sky-100 to-white py-10 md:py-20  text-gray-800">
+    <div className="space-y-4 py-10 md:py-20  text-gray-800 w-11/12 mx-auto">
       <div className="text-center">
         <Heading
           title={

@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+ import userIcon from "../assets/userIcon.jpg"
 import { FaBars } from "react-icons/fa";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
@@ -11,9 +12,7 @@ const Header = () => {
       <li>
         <NavLink
           className={({ isActive }) =>
-            isActive
-              ? "px-4 py-2 rounded-lg shadow-md bg-[#10B981] text-white font-semibold hover:bg-[#34D399]"
-              : "text-neutral"
+            isActive ? "text-[#10B981] underline" : "text-gray-900"
           }
           to={"/"}
         >
@@ -23,9 +22,7 @@ const Header = () => {
       <li>
         <NavLink
           className={({ isActive }) =>
-            isActive
-              ? "px-4 py-2 rounded-lg shadow-md bg-[#10B981] text-white font-semibold hover:bg-[#34D399]"
-              : "text-neutral"
+            isActive ? "text-[#10B981] underline" : "text-gray-900"
           }
           to={"/auth/updateprofile"}
         >
@@ -35,9 +32,7 @@ const Header = () => {
       <li>
         <NavLink
           className={({ isActive }) =>
-            isActive
-              ? "px-4 py-2 rounded-lg shadow-md bg-[#10B981] text-white font-semibold hover:bg-[#34D399]"
-              : "text-gray-900"
+            isActive ? "text-[#10B981] underline" : "text-gray-900"
           }
           to={"/auth/profile"}
         >
@@ -56,13 +51,13 @@ const Header = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
               {links}
             </ul>
           </div>
           <Link className="text-xl font-semibold">
-            Eco<span className="text-green-600">Quest</span>
+            Eco<span className="text-[#10B981]">Quest</span>
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -70,14 +65,19 @@ const Header = () => {
         </div>
         <div className="navbar-end">
           <div className="flex gap-2 items-center">
-            {user && user?.photoURL && (
-              <img
-                title={user?.displayName}
-                src={user.photoURL}
-                className="h-10 w-10 rounded-full object-cover"
-                alt="user"
-              />
+            {user && (
+              <div className="relative group">
+                <img
+                  src={user.photoURL|| userIcon}
+                  className="h-10 w-10 rounded-full object-cover"
+                  alt="user"
+                />
+                <div className="absolute bottom-0 left-3/4 transform -translate-x-1/2 translate-y-12 bg-[#2C3E50] text-white text-sm py-1 px-2 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                  {user?.displayName}
+                </div>
+              </div>
             )}
+
             {user ? (
               <button
                 onClick={logOutUser}
@@ -88,7 +88,7 @@ const Header = () => {
             ) : (
               <button
                 onClick={() => navigate("/auth/login")}
-                className="bg-[#34D399] hover:bg-[#34D399] px-4 py-2 rounded-lg shadow-md text-white transition-all duration-300"
+                className="bg-[#10B981] hover:bg-[#34D399] px-4 py-2 rounded-lg shadow-md text-white transition-all duration-300"
               >
                 Login
               </button>

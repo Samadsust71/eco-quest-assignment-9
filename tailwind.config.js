@@ -23,8 +23,8 @@ export default {
   daisyui:{
     themes: [
       "winter",
-      "forest" ,
       "nord",
+      "wireframe"
 
     ],
   }
