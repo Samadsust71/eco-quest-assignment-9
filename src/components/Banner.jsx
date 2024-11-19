@@ -13,73 +13,89 @@ const Banner = () => {
         <div id="slide1" className="carousel-item relative w-full rounded-xl">
           <img
             src={img1}
-            className="w-full h-full rounded-xl object-cover"
+            className="w-full h-full rounded-xl object-cover contrast-80"
           />
-          <div className="absolute left-5 right-5 top-3/4 flex -translate-y-1/2 transform duration-100 gap-2">
-            <a href="#slide4" className="btn btn-circle btn-outline text-white">
+          <div className="absolute top-3/4 flex -translate-y-1/2 transform duration-100 py-10 justify-center items-center text-center w-full z-10">
+           <div className="flex items-center justify-center gap-3">
+           <a href="#slide4" className="btn btn-circle btn-outline text-white">
               <FaArrowLeft className="text-xl"/>
             </a>
             <a href="#slide2" className="btn btn-circle btn-outline text-white">
             <FaArrowRight className="text-xl"/>
             </a>
+           </div>
           </div>
-          <div className="absolute left-5 right-5 top-1/2 flex flex-col -translate-y-1/2 transform duration-100 gap-2">
-            <h1 className="lg:text-6xl text-2xl text-white lg:w-[60%]">Explore the sights <br /> of the Great Barrier Reef</h1>
-            <p className="text-gray-300">A place where nature and adventure unite</p>
+          <div className="w-full h-full top-0 bottom-0 backdrop-blur-sm bg-transparent absolute"></div>
+          <div className="absolute top-1/4 flex flex-col -translate-y-1/2 transform duration-100 gap-2 w-full text-white py-10 space-y-3 rounded-lg text-center justify-center items-center">
+            <h1 className="lg:text-6xl text-2xl text-white font-bold z-10">Explore the sights <br /> of the Great Barrier Reef</h1>
+            <p className="text-gray-200">A place where nature and adventure unite</p>
+            <a href='#adventure' className="px-4 py-2 border border-sky-200 text-gray-800 font-semibold bg-gradient-to-r from-blue-100 via-sky-200 rounded-lg hover:bg-blue-100 w-fit">Explore</a>
           </div>
         </div>
         <div id="slide2" className="carousel-item relative w-full rounded-xl">
           <img
             src={img2}
-            className="w-full h-full rounded-xl object-cover"
+            className="w-full h-full rounded-xl object-cover contrast-80"
           />
-          <div className="absolute left-5 right-5 top-3/4 flex -translate-y-1/2 transform duration-100  gap-2">
+          <div className="absolute top-3/4 flex -translate-y-1/2 transform duration-100 py-10 justify-center items-center text-center w-full z-10">
+            <div className="flex items-center justify-center gap-3">
             <a href="#slide1" className="btn btn-circle btn-outline text-white">
             <FaArrowLeft className="text-xl"/>
             </a>
             <a href="#slide3" className="btn btn-circle btn-outline text-white">
             <FaArrowRight className="text-xl"/>
             </a>
+            </div>
           </div>
-          <div className="absolute left-5 right-5 top-1/2 flex flex-col -translate-y-1/2 transform duration-100 gap-2">
-            <h1 className="lg:text-6xl text-2xl text-white lg:w-[60%]">Explore the sights <br /> of the Himalayas</h1>
+          <div className="w-full h-full top-0 bottom-0 backdrop-blur-sm bg-transparent absolute"></div>
+          <div className="absolute top-1/4 flex flex-col -translate-y-1/2 transform duration-100 gap-2 w-full text-gray-100 py-10 space-y-3 rounded-lg text-center justify-center items-center">
+            <h1 className="lg:text-6xl text-2xl text-white">Explore the sights <br /> of the Himalayas</h1>
             <p className="text-gray-300">A place where nature and adventure unite</p>
+            <a href="#adventure" className="px-4 py-2 border border-sky-200 text-gray-800 font-semibold bg-gradient-to-r from-blue-100 via-sky-200 rounded-lg hover:bg-blue-100 w-fit">Explore</a>
           </div>
         </div>
         <div id="slide3" className="carousel-item relative w-full rounded-xl">
           <img
             src={img3}
-            className="w-full h-full rounded-xl object-cover"
+            className="w-full h-full rounded-xl object-cover contrast-125"
           />
-          <div className="absolute left-5 right-5 top-3/4 flex -translate-y-1/2 transform duration-100  gap-2">
+          <div className="absolute top-3/4 flex -translate-y-1/2 transform duration-100 py-10 justify-center items-center text-center w-full z-10">
+            <div className="flex items-center justify-center gap-3">
             <a href="#slide2" className="btn btn-circle btn-outline text-white">
             <FaArrowLeft className="text-xl"/>
             </a>
             <a href="#slide4" className="btn btn-circle btn-outline text-white">
             <FaArrowRight className="text-xl"/>
             </a>
+            </div>
           </div>
-          <div className="absolute left-5 right-5 top-1/2 flex flex-col -translate-y-1/2 transform duration-100 gap-2">
-            <h1 className="lg:text-6xl text-2xl text-white lg:w-[60%]">Explore the sights <br /> of the Serengeti National Park</h1>
-            <p className="text-gray-300">A place where nature and adventure unite</p>
+          <div className="w-full h-full top-0 bottom-0 backdrop-blur-sm bg-transparent absolute"></div>
+          <div className="absolute top-1/4 flex flex-col -translate-y-1/2 transform duration-100 gap-2 w-full text-gray-100 py-10 space-y-3 rounded-lg text-center justify-center items-center">
+            <h1 className="lg:text-6xl text-2xl text-white">Explore the sights <br /> of the Serengeti National Park</h1>
+            <p className="text-gray-600">A place where nature and adventure unite</p>
+            <a href="#adventure" className="px-4 py-2 border border-sky-200 text-gray-800 font-semibold bg-gradient-to-r from-blue-100 via-sky-200 rounded-lg hover:bg-blue-100 w-fit">Explore</a>
           </div>
         </div>
-        <div id="slide4" className="carousel-item relative w-full rounded-xl">
+        <div id="slide4" className="carousel-item relative w-full rounded-xl ">
           <img
             src={img4}
-            className="w-full h-full rounded-xl object-cover"
+            className="w-full h-full rounded-xl object-cover contrast-80 opacity-90"
           />
-          <div className="absolute left-5 right-5 top-3/4 flex -translate-y-1/2 transform duration-100 gap-2">
+          <div className="absolute top-3/4 flex -translate-y-1/2 transform duration-100 py-10 justify-center items-center text-center w-full z-10">
+            <div className="flex items-center justify-center gap-3">
             <a href="#slide3" className="btn btn-circle btn-outline text-white">
             <FaArrowLeft className="text-xl"/>
             </a>
             <a href="#slide1" className="btn btn-circle btn-outline text-white">
             <FaArrowRight className="text-xl"/>
             </a>
+            </div>
           </div>
-          <div className="absolute left-5 right-5 top-1/2 flex flex-col -translate-y-1/2 transform duration-100 gap-2">
-            <h1 className="lg:text-6xl text-2xl text-white lg:w-[60%]">Explore the sights <br /> of the Sundarbans</h1>
+          <div className="w-full h-full top-0 bottom-0 backdrop-blur-sm bg-transparent absolute"></div>
+          <div className="absolute top-1/4 flex flex-col -translate-y-1/2 transform duration-100 gap-2 w-full text-gray-100 py-10 space-y-3 rounded-lg text-center justify-center items-center">
+            <h1 className="lg:text-6xl text-2xl text-white">Explore the sights <br /> of the Sundarbans</h1>
             <p className="text-gray-300">A place where nature and adventure unite</p>
+            <a href="#adventure" className="px-4 py-2 border border-sky-200 text-gray-800 font-semibold bg-gradient-to-r from-blue-100 via-sky-200 rounded-lg hover:bg-blue-100 w-fit">Explore</a>
           </div>
         </div>
       </div>
