@@ -8,8 +8,8 @@ import img4 from "../assets/sundarban.jpg";
 
 const Banner = () => {
   return (
-    <div className="py-10 w-11/12 mx-auto">
-      <div className="carousel w-full lg:max-h-[calc(100vh-42px)] rounded-xl">
+    <div className="py-10 w-11/12 mx-auto overflow-hidden">
+      <div className="carousel w-full max-h-[calc(100vh-42px)] rounded-xl scroll-smooth">
         <div id="slide1" className="carousel-item relative w-full rounded-xl">
           <img
             src={img1}
@@ -17,10 +17,10 @@ const Banner = () => {
           />
           <div className="absolute top-3/4 flex  transform duration-100 lg:py-10 justify-center items-center text-center w-full z-10">
            <div className="flex items-center justify-center gap-3">
-           <a href="#slide4" className="btn btn-circle btn-outline text-white">
+           <a href="#slide4" tabIndex={-1} className="btn btn-circle btn-outline text-white">
               <FaArrowLeft className="text-xl"/>
             </a>
-            <a href="#slide2" className="btn btn-circle btn-outline text-white">
+            <a href="#slide2" tabIndex={-1} className="btn btn-circle btn-outline text-white">
             <FaArrowRight className="text-xl"/>
             </a>
            </div>
@@ -39,10 +39,10 @@ const Banner = () => {
           />
           <div className="absolute top-3/4 flex transform duration-100 lg:py-10 justify-center items-center text-center w-full z-10">
             <div className="flex items-center justify-center gap-3">
-            <a href="#slide1" className="btn btn-circle btn-outline text-white">
+            <a href="#slide1" tabIndex={-1} className="btn btn-circle btn-outline text-white">
             <FaArrowLeft className="text-xl"/>
             </a>
-            <a href="#slide3" className="btn btn-circle btn-outline text-white">
+            <a href="#slide3" tabIndex={-1} className="btn btn-circle btn-outline text-white">
             <FaArrowRight className="text-xl"/>
             </a>
             </div>
@@ -61,10 +61,10 @@ const Banner = () => {
           />
           <div className="absolute top-3/4 flex transform duration-100 lg:py-10 justify-center items-center text-center w-full z-10">
             <div className="flex items-center justify-center gap-3">
-            <a href="#slide2" className="btn btn-circle btn-outline text-white">
+            <a href="#slide2" tabIndex={-1} className="btn btn-circle btn-outline text-white">
             <FaArrowLeft className="text-xl"/>
             </a>
-            <a href="#slide4" className="btn btn-circle btn-outline text-white">
+            <a href="#slide4" tabIndex={-1} className="btn btn-circle btn-outline text-white">
             <FaArrowRight className="text-xl"/>
             </a>
             </div>
@@ -83,10 +83,10 @@ const Banner = () => {
           />
           <div className="absolute top-3/4 flex transform duration-100 lg:py-10 justify-center items-center text-center w-full z-10">
             <div className="flex items-center justify-center gap-3">
-            <a href="#slide3" className="btn btn-circle btn-outline text-white">
+            <a href="#slide3" tabIndex={-1} className="btn btn-circle btn-outline text-white">
             <FaArrowLeft className="text-xl"/>
             </a>
-            <a href="#slide1" className="btn btn-circle btn-outline text-white">
+            <a href="#slide1" tabIndex={-1} className="btn btn-circle btn-outline text-white">
             <FaArrowRight className="text-xl"/>
             </a>
             </div>
