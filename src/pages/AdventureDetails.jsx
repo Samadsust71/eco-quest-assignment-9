@@ -1,5 +1,5 @@
 import React from "react";
-import { FaBook, FaClock, FaLeaf, FaMapMarkerAlt, FaUsers } from "react-icons/fa";
+import { FaBook, FaClock, FaMapMarkerAlt, FaUsers } from "react-icons/fa";
 import { useLoaderData } from "react-router-dom";
 
 const AdventureDetails = () => {

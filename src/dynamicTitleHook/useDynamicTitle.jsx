@@ -14,7 +14,6 @@ const useDynamicTitle = () => {
       "/auth/login": "Login | EcoQuest",
       "/auth/registration": "Registration | EcoQuest",
       "/auth/resetpassword": "Password Reset | EcoQuest",
-      "/adventure/:id": "Explore Adventures | EcoQuest",
     };
 
     const defaultTitle = "EcoQuest - Adventure Awaits";
