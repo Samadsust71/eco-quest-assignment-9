@@ -73,7 +73,7 @@ const Header = () => {
                   className="h-10 w-10 rounded-full object-cover"
                   alt="user"
                 />
-                <div className="absolute -bottom-5 left-1/2 transform -translate-x-1/2 translate-y-12 bg-[#2C3E50] text-white text-sm py-1 px-2 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-12 bg-[#2C3E50] text-white text-sm py-1 px-2 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
                   {user?.displayName}
                 </div>
               </div>
