@@ -5,7 +5,6 @@ import { useLoaderData } from "react-router-dom";
 const AdventureDetails = () => {
   const data = useLoaderData();
   const {
-    id,
     adventureTitle,
     img,
     categoryName,

@@ -2,7 +2,8 @@ import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import toast from "react-hot-toast";
-import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
   const [errorMessage, setErrorMessage] = useState("");
@@ -42,7 +43,7 @@ const Login = () => {
       })
       .catch((err) => {
         setLoading(false)
-        setErrorMessage(err.message)
+        toast.error(err.message)
       });
   };
 
@@ -123,7 +124,7 @@ const Login = () => {
           disabled={loading}
           className="px-4 flex items-center justify-center gap-2 py-2 border border-[#0a5784] bg-gradient-to-b from-blue-50 via-sky-100 to-white w-full rounded-lg text-[#0a5784] hover:bg-sky-200 active:bg-sky-300 transition-all"
         >
-          <FaGoogle className="text-[#0a5784]" />
+          <FcGoogle/>
           <span>{loading?"Signing in...":"Sign In with Google"}</span>
         </button>
       </div>

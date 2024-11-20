@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import { FaBars } from "react-icons/fa";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
+import logo from "../assets/logo.webp"
 
 const Header = () => {
   const { logOutUser, user } = useContext(AuthContext);
@@ -56,9 +57,12 @@ const Header = () => {
               {links}
             </ul>
           </div>
-          <Link className="text-xl font-semibold">
+          <div className="flex gap-2 items-center">
+            <div className="hidden lg:block"><img src={logo} alt="" className="h-10 w-10 rounded-full object-cover" /></div>
+            <div><Link className="text-xl font-semibold">
             Eco<span className="text-[#10B981]">Quest</span>
-          </Link>
+          </Link></div>
+          </div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="flex items-center gap-4">{links}</ul>
@@ -73,7 +77,7 @@ const Header = () => {
                   className="h-10 w-10 rounded-full object-cover"
                   alt="user"
                 />
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-12 bg-[#2C3E50] text-white text-sm py-1 px-2 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 translate-y-12 bg-white text-gray-800 text-sm py-1 pl-2 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none w-[100px]">
                   {user?.displayName}
                 </div>
               </div>
