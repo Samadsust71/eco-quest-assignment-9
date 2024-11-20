@@ -72,8 +72,8 @@ const Registration = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center my-10 max-w-xl mx-auto">
-      <div className="card bg-gradient-to-b from-blue-50 via-sky-100 to-white w-full max-w-xl shrink-0 border">
+    <div className="flex flex-col justify-center items-center my-10 max-w-xl w-11/12 mx-auto">
+      <div className="card bg-gradient-to-b from-blue-50 via-sky-100 to-white w-full max-w-xl shrink-0 shadow-lg rounded-lg">
         <h1 className="text-2xl font-bold text-center pt-6">Register now!</h1>
         <form onSubmit={handleSubmit} className="card-body">
           <div className="form-control">
@@ -97,7 +97,6 @@ const Registration = () => {
               name="photo"
               placeholder="Enter your photo url"
               className="input input-bordered bg-white"
-              
             />
           </div>
           <div className="form-control">
@@ -128,7 +127,7 @@ const Registration = () => {
               onClick={() => setShowPass(!showPass)}
               className="btn btn-xs absolute right-2 top-12"
             >
-              {showPass ? <FaEye /> : <FaEyeSlash />}
+              {showPass ? <FaEye /> :<FaEyeSlash /> }
             </button>
           </div>
 

@@ -28,9 +28,9 @@ const Login = () => {
         toast.success("Login Succesfull");
         navigate(`${location?.state ? location.state : "/"}`);
       })
-      .catch((err) => {
+      .catch(() => {
         setLoading(false)
-        setErrorMessage(err.message);
+        setErrorMessage("Invalid Username or Password");
       });
   };
 
@@ -48,8 +48,8 @@ const Login = () => {
 
   return (
     <div className="">
-      <div className="flex flex-col justify-center items-center py-10 max-w-xl mx-auto">
-        <div className="card bg-gradient-to-b from-blue-50 via-sky-100 to-white w-full max-w-xl shrink-0 border">
+      <div className="flex flex-col justify-center items-center py-10 max-w-xl w-11/12 mx-auto">
+        <div className="card bg-gradient-to-b from-blue-50 via-sky-100 to-white w-full max-w-xl shrink-0 shadow-lg rounded-lg">
           <h1 className="text-2xl font-bold text-center pt-6">Login now!</h1>
           <form onSubmit={handleSubmit} className="card-body">
             <div className="form-control">
@@ -81,7 +81,7 @@ const Login = () => {
           
                 className="btn btn-xs absolute right-2 top-12"
               >
-                {showPass ?  <FaEye /> :<FaEyeSlash /> }
+                {showPass ? <FaEye /> : <FaEyeSlash />}
               </button>
               <label className="label">
                 <Link

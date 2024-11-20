@@ -9,8 +9,8 @@ const MyProfile = () => {
     const navigate = useNavigate()
 
   return (
-    <div className="flex justify-center bg-gray-100 items-center min-h-screen  py-6 rounded-xl">
-      <div className="card  bg-gradient-to-b from-blue-50 via-sky-100 to-white border p-6">
+    <div className="flex justify-center w-11/12 mx-auto items-center min-h-screen  py-6 rounded-xl">
+      <div className="card  bg-gradient-to-b from-blue-50 via-sky-100 to-whiteshadow-lg rounded-lg border border-blue-200 p-6">
         <figure className="w-32 h-32 mx-auto">
           <img
             src={user?.photoURL ||userIcon }
@@ -27,7 +27,7 @@ const MyProfile = () => {
           <div className="card-actions justify-center mt-4">
             <button
               onClick={() => navigate("/auth/updateprofile")}
-              className="btn bg-[#0a5784] text-white font-bold hover:bg-[#084a63] active:bg-[#06394e]"
+              className="btn rounded-lg bg-[#0a5784] text-white font-bold hover:bg-[#084a63] active:bg-[#06394e]"
             >
               Update Profile
             </button>

@@ -24,8 +24,8 @@ const ResetPassword = () => {
       });
   };
   return (
-    <div className="flex flex-col justify-center items-center my-10">
-      <div className="card bg-gradient-to-b from-blue-50 via-sky-100 to-white w-full max-w-xl shrink-0 shadow-2xl">
+    <div className="flex flex-col justify-center items-center my-10 w-11/12 mx-auto">
+      <div className="card bg-gradient-to-b from-blue-50 via-sky-100 to-white w-full max-w-xl shrink-0 shadow-lg rounded-lg">
         <h1 className="text-2xl font-bold text-center pt-6">Reset Password</h1>
         <form onSubmit={handleSubmit} className="card-body">
           <div className="form-control">
