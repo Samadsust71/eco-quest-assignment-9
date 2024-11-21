@@ -31,7 +31,7 @@ const Login = () => {
       })
       .catch(() => {
         setLoading(false)
-        setErrorMessage("Invalid Username or Password");
+        setErrorMessage("Invalid Email or Password");
       });
   };
 
