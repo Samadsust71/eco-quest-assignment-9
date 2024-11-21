@@ -30,9 +30,9 @@ Visit the live version of the project here: [EcoQuest](https://eco-quest-37f67.w
 - **[aos](https://www.npmjs.com/package/aos)**: For implementing scroll animations.
 - **[tailwindcss](https://www.npmjs.com/package/tailwindcss)**: Utility-first CSS framework for styling.
 - **[daisyui](https://www.npmjs.com/package/daisyui)**: Tailwind CSS component library for pre-built styled components.
-- **[react-hot-toast](https://www.npmjs.com/package/react-hot-toast): For displaying real-time notifications and alerts.
-- **[framer-motion](https://www.npmjs.com/package/framer-motion): For adding fluid animations and transitions to components.
-- **[firebase](https://www.npmjs.com/package/firebase): For authentication and database functionality.
+- **[react-hot-toast](https://www.npmjs.com/package/react-hot-toast)**: For displaying real-time notifications and alerts.
+- **[framer-motion](https://www.npmjs.com/package/framer-motion)**: For adding fluid animations and transitions to components.
+- **[firebase](https://www.npmjs.com/package/firebase)**: For authentication and database functionality.
 
 
 ---
