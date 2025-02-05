@@ -1,10 +1,14 @@
 # EcoQuest - Adventure Awaits 🌍
 
-## Purpose
-EcoQuest is a platform designed for eco-conscious travelers who seek thrilling and sustainable adventures. Our goal is to connect individuals with guided activities that embrace nature while promoting environmental conservation. From breathtaking mountain treks to tranquil kayaking in mangroves, each adventure is carefully crafted to provide a unique and eco-friendly experience.
+![EcoQuest Preview](https://i.ibb.co.com/9KLqsQX/Screenshot-65.png)
 
 ## Live URL
 Visit the live version of the project here: [EcoQuest](https://eco-quest-37f67.web.app)
+
+---
+
+## Purpose
+EcoQuest is a platform designed for eco-conscious travelers who seek thrilling and sustainable adventures. Our goal is to connect individuals with guided activities that embrace nature while promoting environmental conservation. From breathtaking mountain treks to tranquil kayaking in mangroves, each adventure is carefully crafted to provide a unique and eco-friendly experience.
 
 ---
 
